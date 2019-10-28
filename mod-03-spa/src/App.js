@@ -1,23 +1,39 @@
 import React from "react";
 import "./App.css";
 
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+
 import Cat from "./components/Cat";
 import Dog from "./components/Dog";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <div>
         <header>
-          <a href="/cat">Cat</a>
+          <Link to="/cat">Cat</Link>
           <span> | </span>
-          <a href="/dog">Dog</a>
+          <Link to="/cat/zorro">Zorro</Link>
+          <span> | </span>
+          <Link to="/dog">Dog</Link>
+          <span> | </span>
+          <Link to="/dog/pluto">Pluto</Link>
         </header>
 
-        <Cat />
-        <Dog />
+        <Switch>
+          <Route path="/" exact render={() => <div>Home</div>} />
+          <Route path="/cat" exact component={Cat} />
+          <Route path="/cat/:catName" component={Cat} />
+          <Route path="/dog" exact component={Dog} />
+          <Route path="/dog/:dogName" render={() => <Dog />} />
+          <Route path="/dog2" />
+          <Route render={() => <div>Page not found</div>} />
+        </Switch>
+
+        {/* <Cat />
+        <Dog /> */}
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 
