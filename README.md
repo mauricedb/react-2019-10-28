@@ -6,3 +6,4 @@
 - [NPM](https://www.npmjs.com/)
 - [Webpack](https://webpack.js.org/)
 - [ESLint](https://eslint.org)
+- [ECMAScript compatibility](https://kangax.github.io/compat-table/es6/)
