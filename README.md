@@ -9,3 +9,7 @@
 - [ECMAScript compatibility](https://kangax.github.io/compat-table/es6/)
 - [React Router DOM](https://reacttraining.com/react-router/web/guides/quick-start)
 - [Next JS](https://nextjs.org/)
+- [Redux](https://redux.js.org/)
+- [Redux DevTools Extension](http://extension.remotedev.io/)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
+- [Immer](https://immerjs.github.io/immer/docs/introduction)
