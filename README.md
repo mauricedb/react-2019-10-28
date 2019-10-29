@@ -13,3 +13,7 @@
 - [Redux DevTools Extension](http://extension.remotedev.io/)
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 - [Immer](https://immerjs.github.io/immer/docs/introduction)
+- [RxJS](https://rxjs.dev/)
+- [ReactiveX](http://reactivex.io/)
+- [RxMarbles](https://rxmarbles.com)
+- [ParcelJS](https://parceljs.org/)
