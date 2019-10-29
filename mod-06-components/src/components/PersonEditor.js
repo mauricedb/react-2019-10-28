@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PersonEditorPresation from "./PersonEditorPresation";
 
 class PersonEditor extends Component {
   state = { firstName: "", lastName: "" };
@@ -8,28 +9,7 @@ class PersonEditor extends Component {
   };
 
   render() {
-    const { firstName, lastName } = this.state;
-
-    return (
-      <div>
-        <div>
-          <label>
-            Firstname:
-            <input
-              name="firstName"
-              value={firstName}
-              onChange={this.onChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Lastname:
-            <input name="lastName" value={lastName} onChange={this.onChange} />
-          </label>
-        </div>
-      </div>
-    );
+    return <PersonEditorPresation {...this.state} onChange={this.onChange} />;
   }
 }
 

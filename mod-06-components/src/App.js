@@ -4,6 +4,7 @@ import Clock from "./components/Clock";
 import Greeter from "./components/Greeter";
 import PersonEditor from "./components/PersonEditor";
 import Counter from "./components/Counter";
+import withErrorBoundary from "./components/withErrorBoundary";
 
 function App() {
   return (
@@ -16,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default withErrorBoundary(App);
