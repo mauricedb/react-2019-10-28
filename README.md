@@ -17,3 +17,6 @@
 - [ReactiveX](http://reactivex.io/)
 - [RxMarbles](https://rxmarbles.com)
 - [ParcelJS](https://parceljs.org/)
+- [Jest](https://jestjs.io)
+- [Enzyme](https://airbnb.io/enzyme/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
