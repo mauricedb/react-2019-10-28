@@ -1,3 +1,4 @@
+"use strict";
 var Calculator = /** @class */ (function () {
     // private message: string;
     // constructor(message: string) {
@@ -21,12 +22,16 @@ var add = document.getElementById("add");
 var subtract = document.getElementById("subtract");
 var result = document.getElementById("result");
 var calculator = new Calculator("");
-add.addEventListener("click", function () {
-    result.textContent = calculator.add(+x.value, +y.value).toString();
-});
-subtract.addEventListener("click", function () {
-    result.textContent = calculator.subtract(x.value, y.value).toString();
-});
+if (add && result) {
+    add.addEventListener("click", function () {
+        result.textContent = calculator.add(+x.value, +y.value).toString();
+    });
+}
+subtract &&
+    subtract.addEventListener("click", function () {
+        result &&
+            (result.textContent = calculator.subtract(+x.value, +y.value).toString());
+    });
 var person = {
     firstName: "Maurice"
 };

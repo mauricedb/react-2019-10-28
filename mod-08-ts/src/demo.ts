@@ -10,7 +10,7 @@ class Calculator {
 
     return x + y;
   }
-  subtract(x, y) {
+  subtract(x: number, y: number) {
     return x - y;
   }
 }
@@ -22,13 +22,17 @@ const result = document.getElementById("result");
 
 const calculator = new Calculator("");
 
-add.addEventListener("click", () => {
-  result.textContent = calculator.add(+x.value, +y.value).toString();
-});
+if (add && result) {
+  add.addEventListener("click", () => {
+    result.textContent = calculator.add(+x.value, +y.value).toString();
+  });
+}
 
-subtract.addEventListener("click", () => {
-  result.textContent = calculator.subtract(x.value, y.value).toString();
-});
+subtract &&
+  subtract.addEventListener("click", () => {
+    result &&
+      (result.textContent = calculator.subtract(+x.value, +y.value).toString());
+  });
 
 var person = {
   firstName: "Maurice"
