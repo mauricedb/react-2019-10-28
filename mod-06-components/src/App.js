@@ -5,15 +5,18 @@ import Greeter from "./components/Greeter";
 import PersonEditor from "./components/PersonEditor";
 import Counter from "./components/Counter";
 import withErrorBoundary from "./components/withErrorBoundary";
+import { TimeProvider } from "./components/TImeContext";
 
 function App() {
   return (
-    <div>
-      <Greeter person={{ firstName: "Maurice" }} />
-      <Clock />
-      <PersonEditor />
-      <Counter />
-    </div>
+    <TimeProvider>
+      <div>
+        <Greeter person={{ firstName: "Maurice" }} />
+        <Clock />
+        <PersonEditor />
+        <Counter />
+      </div>
+    </TimeProvider>
   );
 }
 
