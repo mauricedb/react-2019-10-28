@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import Clock from "./components/Clock";
+import Greeter from "./components/Greeter";
+import PersonEditor from "./components/PersonEditor";
+import Counter from "./components/Counter";
+import withErrorBoundary from "./components/withErrorBoundary";
+import { TimeProvider } from "./components/TimeContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TimeProvider>
+      <div>
+        <Greeter person={{ firstName: "Maurice" }} />
+        <Clock />
+        <PersonEditor />
+        <Counter />
+      </div>
+    </TimeProvider>
   );
 }
 
-export default App;
+export default withErrorBoundary(App);
