@@ -20,3 +20,4 @@
 - [Jest](https://jestjs.io)
 - [Enzyme](https://airbnb.io/enzyme/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- [TypeScript](http://www.typescriptlang.org/)

@@ -8,7 +8,7 @@ function withErrorBoundary(WrappedComponent) {
       return { error };
     }
     componentDidCatch(error, info) {
-      console.warn("Oops", error, info);
+      // console.warn("Oops", error, info);
     }
 
     render() {
